@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawan Kumar Pandey | Health, Safety & Environmental Professional</title>
+  <meta name="description" content="Professional Health, Safety and Environmental (HSE) services. Risk assessments, audits, SHE plans, and training for power stations, construction, and engineering sectors." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      color: #111827;
+      background: #f3f4f6;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(17, 24, 39, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(156, 163, 175, 0.5);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .brand span {
+      color: #22c55e;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      opacity: 0.85;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      color: #22c55e;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #052e16;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(34, 197, 94, 0.45);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(156, 163, 175, 0.6);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(31, 41, 55, 0.9);
+      border-color: #22c55e;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: #050816;
+    }
+
+    .hero-text h1 span {
+      color: #15803d;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.06);
+      color: #065f46;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1.3rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .hero-highlights span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-highlights span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.8rem;
+      align-items: center;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 0.75rem;
+    }
+
+    .hero-card {
+      border-radius: 1.5rem;
+      background: radial-gradient(circle at top left, #22c55e 0, #16a34a 12%, #111827 48%);
+      padding: 2rem 1.5rem;
+      color: #f9fafb;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "HSE";
+      position: absolute;
+      right: -10px;
+      top: 8px;
+      font-size: 4rem;
+      font-weight: 800;
+      color: rgba(22, 163, 74, 0.19);
+      letter-spacing: 0.12em;
+    }
+
+    .hero-card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .hero-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-stat {
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.9rem;
+      background: rgba(15, 23, 42, 0.55);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .hero-card-footer {
+      font-size: 0.8rem;
+      color: #d1d5db;
+      opacity: 0.92;
+      border-top: 1px solid rgba(148, 163, 184, 0.45);
+      padding-top: 0.85rem;
+      margin-top: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 1.8rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.4rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 0.7rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #0f172a;
+      border: 1px solid #e5e7eb;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      padding: 1.4rem 1.3rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+    }
+
+    .service-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #16a34a;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: #111827;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.3rem;
+    }
+
+    .timeline {
+      border-left: 2px solid #e5e7eb;
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .timeline-item {
+      margin-bottom: 1.1rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.24rem;
+      top: 0.2rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+    }
+
+    .timeline-role {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .timeline-org {
+      font-size: 0.85rem;
+      color: #16a34a;
+      margin-bottom: 0.1rem;
+    }
+
+    .timeline-meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-text {
+      font-size: 0.88rem;
+      color: #4b5563;
+    }
+
+    .testimonial {
+      background: #0f172a;
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.4rem;
+      color: #e5e7eb;
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .testimonial-quote {
+      font-size: 0.95rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+    }
+
+    form {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 0.25rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 0.8rem;
+      border: 1px solid #e5e7eb;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.9rem;
+      outline: none;
+      background: #f9fafb;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #22c55e;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.6);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .contact-info h3 {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      color: #111827;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      color: #111827;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 1.4rem 1.25rem 2rem;
+      border-top: 1px solid #e5e7eb;
+      background: #f9fafb;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #4b5563;
+    }
+
+    .footer-links a:hover {
+      color: #16a34a;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .two-column,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      section {
+        padding: 2.5rem 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero-text h1 {
+        font-size: 1.9rem;
+      }
+
+      .grid-3,
+      .grid-2,
+      .form-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand">Pawan Kumar <span>Pandey</span></div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <div style="margin-bottom: 1.5rem;">
+          <img src="your-photo.jpg" alt="Portrait of Pawan Kumar Pandey" style="width: 120px; height: 120px; border-radius: 999px; object-fit: cover; border: 3px solid #22c55e; box-shadow: 0 8px 24px rgba(15,23,42,0.3);" />
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Health, Safety & Environmental Professional
+        </div>
+        <h1>
+          Helping organisations work safely,
+          <span>every single day</span>
+        </h1>
+        <p class="hero-subtitle">
+          HSE Manager with more than 10 years of experience in power stations, construction, and engineering maintenance.
+          Strong focus on practical risk reduction, legal compliance, and worker engagement.
+        </p>
+        <div class="hero-highlights">
+          <span>NEBOSH International Diploma (ID3 in progress)</span>
+          <span>National Diploma in Safety Management (UNISA)</span>
+          <span>HSE leadership at coal-fired power stations across South Africa</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Book a consultation</a>
+          <a href="#services" class="btn-secondary">View HSE services</a>
+        </div>
+        <p class="hero-note">
+          Based in South Africa. Remote and on-site support available across Africa and the Middle East.
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-title">Quick snapshot</div>
+        <div class="hero-stat-grid">
+          <div class="hero-stat">
+            <div class="hero-stat-label">Experience</div>
+            <div class="hero-stat-value">12+ years</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Projects</div>
+            <div class="hero-stat-value">50+ sites</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Key focus</div>
+            <div class="hero-stat-value">Power & heavy industry</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Core work</div>
+            <div class="hero-stat-value">Risk, audits, training</div>
+          </div>
+        </div>
+        <div class="hero-card-footer">
+          Support for SHE plans, baseline risk assessments, legal appointments, incident investigations, training material,
+          and safety culture improvement.
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Pawan</h2>
+      <p class="section-subtitle">
+        Independent health, safety and environmental professional with practical site experience and strong documentation skills.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <h3>Professional profile</h3>
+          <p>
+            I work as an HSE Manager in the power generation sector. My daily work includes audits, risk assessments,
+            safety plans, incident investigations, and coaching supervisors on safe work.
+          </p>
+          <p>
+            I specialise in mill maintenance and high-risk activities inside power stations. I understand permit-to-work
+            systems, isolation standards, confined spaces, and contractor management.
+          </p>
+          <p>
+            I write and review SHE plans, baseline risk assessments, and operating procedures for sites such as Medupi,
+            Kusile, Majuba, Duvha, and other Eskom stations.
+          </p>
+          <div class="pill-list">
+            <div class="pill">HSE Management Systems</div>
+            <div class="pill">Baseline and task-based risk assessments</div>
+            <div class="pill">Construction and maintenance safety</div>
+            <div class="pill">Incident investigation and learning</div>
+            <div class="pill">SHE file and tender compliance</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Key qualifications</h3>
+          <p>
+            You receive advice supported by recognised qualifications and real site experience.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">NEBOSH International Diploma</span><br />
+              Units ID1 and ID2 completed.
+            </li>
+            <li>
+              <span class="contact-label">National Diploma in Safety Management</span><br />
+              University of South Africa (UNISA).
+            </li>
+            <li>
+              <span class="contact-label">NEBOSH International General Certificate</span>
+            </li>
+            <li>
+              <span class="contact-label">Additional training</span><br />
+              HIRA and risk assessment, Incident investigation, Legal liability, HIRS, and facilitation training.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">HSE services</h2>
+      <p class="section-subtitle">
+        Support for organisations that need both strong documentation and practical field control.
+      </p>
+      <div class="grid-3">
+        <div class="service-card">
+          <div class="service-label">01</div>
+          <h3>Baseline and task-based risk assessments</h3>
+          <p>
+            Development and review of baseline and issue-based risk assessments for power station work, mill maintenance,
+            construction, and workshop activities.
+          </p>
+          <p class="service-meta">Outcome. Clear risk ratings, control measures, and action plans for supervisors.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-label">02</div>
+          <h3>SHE plans and safety files</h3>
+          <p>
+            Full SHE plans and safety files for tenders, shutdowns, and long-term maintenance contracts, tailored to client
+            specifications and legal duties.
+          </p>
+          <p class="service-meta">Outcome. Document packs ready for client review and audits.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-label">03</div>
+          <h3>Gap analysis and audits</h3>
+          <p>Site inspections, document reviews, and gap analysis against OHS Act requirements, ISO 45001 structure, and client standards.</p>
+          <p class="service-meta">Quote provided after assessment</p>
+          <h3>Audits and gap analysis</h3>
+          <p>
+            Site inspections, document reviews, and gap analysis against OHS Act requirements, ISO 45001 structure, and
+            client standards.
+          </p>
+          <p class="service-meta">Outcome. Practical findings with risk-based priorities.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-label">04</div>
+          <h3>Incident investigation support</h3>
+          <p>
+            Assistance with incident investigations, root cause analysis, and action plans. Focus on learning and prevention,
+            not blame.
+          </p>
+          <p class="service-meta">Outcome. Clear reports and trackable actions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-label">05</div>
+          <h3>HSE training and inductions</h3>
+          <p>
+            Development of site-specific induction content, short HSE training sessions, and visual material that supports
+            supervisors and workers.
+          </p>
+          <p class="service-meta">Outcome. Focused training that supports other HSE controls.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-label">06</div>
+          <h3>HSE mentoring for supervisors</h3>
+          <p>
+            One-to-one and small-group support for supervisors and safety officers to strengthen risk-based thinking and
+            leadership.
+          </p>
+          <p class="service-meta">Outcome. Stronger ownership of safety at line-management level.</p>
+        </div>
+      <div style="margin-top: 2.2rem;" class="card">
+        <h3>Service packages</h3>
+        <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.9rem;">
+          Use these as a guide. Final pricing depends on scope, site location, and duration.
+        </p>
+        <div class="pricing-grid">
+          <div class="service-card">
+            <div class="service-label">Starter</div>
+            <h3>Safety file compilation</h3>
+            <p>Complete safety file preparation for small contractors who must start work immediately and need a 100 percent compliant file aligned to their scope.</p>
+            <p class="service-meta">Fixed rate. ZAR 5 000 per file</p>
+            <p class="service-meta"></p>
+          </div>
+          <div class="service-card">
+            <div class="service-label">Project</div>
+            <h3>Shutdown or project support</h3>
+            <p>Support from planning to close out for a single shutdown or project, including audits, inspections, and external safety professionals such as safety officers to assist the contractor.</p>
+            <p class="service-meta">Day or project rate on request</p>
+          </div>
+          <div class="service-card">
+            <div class="service-label">Partnership</div>
+            <h3>Ongoing HSE partnership</h3>
+            <p>Monthly support for organisations that need a part-time HSE manager to guide systems and culture.</p>
+            <p class="service-meta">Monthly retainer on request</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <p class="section-subtitle">
+        Health and safety leadership in demanding, high-risk environments.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <h3>Career timeline</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-role">HSE Manager</div>
+              <div class="timeline-org">Energy Flow Technologies (EnFloTech)</div>
+              <div class="timeline-meta">2013 to present</div>
+              <div class="timeline-text">
+                Lead HSE for mill maintenance and related projects at Eskom power stations. Develop SHE plans, risk
+                assessments, and audit programmes. Mentor safety officers.
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="testimonial">
+            <div class="testimonial-quote">
+              “Pawan supports our projects from tender stage to close-out. His SHE files pass client review and he raises
+              practical issues our supervisors understand.”
+            </div>
+            <div class="testimonial-author">Project Manager, power-station maintenance company</div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-quote">
+              “We rely on his risk assessments and toolbox talks for shutdowns. He responds fast and understands how the
+              work really runs on site.”
+            </div>
+            <div class="testimonial-author">Site Supervisor, mill maintenance contractor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2 class="section-title">Profile and CV</h2>
+      <p class="section-subtitle">
+        Download a detailed CV and share it with HR teams, clients, or recruitment partners.
+      </p>
+      <div class="two-column">
+        <div class="card">
+          <h3>Professional CV</h3>
+          <p>
+            The CV includes full employment history, detailed duties, project examples, qualifications, and training
+            records.
+          </p>
+          <p>
+            Replace the link below with your actual PDF file once it is uploaded to your hosting space.
+          </p>
+          <a href="cv/pawan-kumar-pandey-cv.pdf" class="btn-primary">Download CV (PDF)</a>
+        </div>
+        <div class="card">
+          <h3>About EnFloTech</h3>
+          <p>
+            EnFloTech is a specialist company focused on mill maintenance and performance improvement in power stations and forms part of a group of companies that includes Lutinsi Engineering, CMP, and ALJIMM Engineering.
+          </p>
+          <p>
+            As HSE Manager, I support EnFloTech and its group companies with risk assessments, SHE plans, audits, and investigations and provide HSE support on specific projects where needed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        Share a short message about your site, scope of work, and time frame. You will receive a response with next steps.
+      </p>
+      <div class="contact-grid">
+        <form action="mailto:pawanpandey81@yahoo.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div>
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Company name" />
+            </div>
+          </div>
+          <div class="form-row" style="margin-top: 0.9rem;">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="Contact number" />
+            </div>
+          </div>
+          <div style="margin-top: 0.9rem;">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your site, work, and HSE support required."></textarea>
+          </div>
+          <div style="margin-top: 1.1rem;">
+            <button type="submit" class="btn-primary">Send enquiry</button>
+          </div>
+        </form>
+        <div class="contact-info">
+          <h3>Direct contact</h3>
+          <p>
+            Prefer a direct message. Use the details below.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span><br />
+              pawanpandey81@yahoo.com
+            </li>
+            <li>
+              <span class="contact-label">Cell</span><br />
+              0726860858
+            </li>
+            <li>
+              <span class="contact-label">WhatsApp</span><br />
+              <a href="https://wa.me/27726860858" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </li>
+            <li>
+              <span class="contact-label">Location</span><br />
+              Johannesburg, South Africa. Available for remote projects across Africa and the Middle East.
+            </li>
+            <li>
+              <span class="contact-label">LinkedIn</span><br />
+              <a href="#" target="_blank" rel="noopener">LinkedIn profile link here</a>
+            </li>
+          </ul>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: #6b7280;">
+            You receive a response within a reasonable time. For urgent power-station work, mention deadlines in your
+            message.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Pawan Kumar Pandey. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#services">HSE services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
